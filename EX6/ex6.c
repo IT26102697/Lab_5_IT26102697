@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int main(void)
+{
+    char status;
+    int i;
+
+    for (i = 1; i <= 5; i++)
+    {
+        printf("Enter status of order %d: ", i);
+        scanf(" %c", &status);
+
+        if (status == 'I')
+        {
+            printf("Skipping order %d\n", i);
+            continue;
+        }
+        else if (status == 'S')
+        {
+            printf("Stopping at order %d\n", i);
+            break;
+        }
+        else if (status == 'V')
+        {
+            printf("Processing order %d\n", i);
+        }
+    }
+
+    return 0;
+}
